@@ -1,0 +1,31 @@
+import subprocess as sp
+import requests
+import time
+import colorama
+from colorama import Fore, Style
+
+hosts = ['https://www.google.com/','https://www.damgi.com', 'reddit.com','https://www.github.com/']
+
+starttime=time.time()
+
+red = (Fore.RED + ("\u25CF"))
+green = (Fore.GREEN + ("\u25CF"))
+
+def pinger():
+    for i in hosts:
+        try:
+            check = requests.get(i)
+            print(i,' ' +  green, Style.RESET_ALL)
+        except requests.exceptions.MissingSchema:
+            print(i,' ' + red , Style.RESET_ALL)
+        except requests.exceptions.ConnectionError:
+            print( i,' ' + red , Style.RESET_ALL)
+         
+def main():
+    while True:
+        pinger()
+        time.sleep(10.0 - ((time.time() - starttime) % 10.0))
+        sp.call('cls',shell=True)
+        
+
+main()
