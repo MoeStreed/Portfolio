@@ -12,16 +12,14 @@ root = Tk()
 root.title("Address Book")
 root.geometry("480x600")
 
-# Database
-
-
-# Create a database or connect to one
+# Creates a database or you can connect to one
 conn = sqlite3.connect('address_book.db')
 
-#Create cursor
+#Creates cursor
 c = conn.cursor()
 
-#Create Table if one does not already exist
+#Creates Table if one does not already exist
+#Edited it out once the table was made successfully 
 """
 c.execute('''CREATE TABLE addresses(
     first_name text,
@@ -33,7 +31,7 @@ c.execute('''CREATE TABLE addresses(
     )''')
 """
 
-#Create function to delete a record
+#Creates function to delete a record
 def delete():
     # Create a database or connect to one
     conn = sqlite3.connect('address_book.db')
@@ -50,7 +48,7 @@ def delete():
 
 
 
-#Create Submit function
+#Creates Submit function
 def submit():
     # Create a database or connect to one
     conn = sqlite3.connect('address_book.db')
@@ -81,7 +79,7 @@ def submit():
     state.delete(0, END)
     zipcode.delete(0, END)
 
-#create query function
+#creates query function
 def query():
         # Create a database or connect to one
     conn = sqlite3.connect('address_book.db')
@@ -108,8 +106,8 @@ def query():
 
 
     
-
-#Text boxes
+#TODO: Find some way to shorten this repeated mess. Maybe have layout beneth act as a template to import at top of file 
+#All the Text boxes
 f_name = Entry(root, width=30)
 f_name.grid(row=0, column=1, padx=20, pady=(10,0))
 l_name = Entry(root, width=30)
@@ -125,7 +123,7 @@ zipcode.grid(row=5, column=1, pady=(10,0))
 delete_box = Entry(root, width=30)
 delete_box.grid(row=9, column=1, pady=5)
 
-#Create text box labels
+#Creates text box labels
 f_name_label= Label(root, text= "First Name")
 f_name_label.grid(row=0, column=0)
 l_name_label= Label(root, text= "Last Name")
