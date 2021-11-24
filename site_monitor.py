@@ -17,7 +17,7 @@ red = (Fore.RED + ("\u25CF"))
 green = (Fore.GREEN + ("\u25CF"))
 
 '''
-Funciton that pings wbesite for respons
+Function that pings wbesite for response
 Red = no connection to site found
 Green = connection found 
 '''
