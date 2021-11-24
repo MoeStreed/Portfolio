@@ -31,7 +31,7 @@ def pinger():
         except requests.exceptions.ConnectionError:
             print( i,' ' + red , Style.RESET_ALL)
             
-#Main function tht calls the pinger and prints results to command line every 10 seconds and clears line            
+#Main function tht calls the pinger and prints results to command line every 10 seconds and clears previous line            
 def main():
     while True:
         pinger()
