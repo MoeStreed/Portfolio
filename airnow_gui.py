@@ -1,4 +1,6 @@
-#GUI application that uses the airnow api to monitor the aircondiditon i a selected city
+#This is a simple GUI API application that uses the airnow api to monitor the aircondiditon i a selected city
+#GUI is a rectangluar box that provides air quality informaition and changes the background color from 
+#red, yellow and green depending on how breathable the air is
 from tkinter import *
 import PIL
 import requests
