@@ -1,4 +1,6 @@
 #Sudoku solver using a backtracking algorithm 
+#Can manipulate the numbers on the "board" any way you want and will be solved accoringly
+#The number 0 is a place holder for a blank square in sudoku
 
 board = [
     [5,3,0,0,7,0,0,0,0],
@@ -49,6 +51,7 @@ def valid(bo, num, pos):
 				return False
 
 	return True
+
 
 def print_board(bo):
 	for i in range(len(bo)):
